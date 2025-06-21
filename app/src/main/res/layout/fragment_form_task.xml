@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.FormTaskFragment"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            app:navigationIcon="@drawable/ic_back"
+            android:paddingTop="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_title_toolbar_form_task_fragment"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"/>
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:padding="16dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/textView"
+               android:text="@string/description_text"
+               android:textColor="@color/white"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"/>
+
+           <EditText
+               android:id="@+id/editTextDescricao"
+               android:layout_width="match_parent"
+               android:layout_height="48dp"
+               android:layout_marginTop="10dp"
+               android:hint="@string/hit_edit_description"
+               style="@style/EditTextTheme"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/textView"/>
+
+           <TextView
+               android:id="@+id/textViewStatus"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="16dp"
+               android:text="@string/status_text"
+               android:textColor="@color/white"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/editTextDescricao"/>
+
+           <RadioGroup
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:orientation="horizontal"
+               android:id="@+id/radioGroup"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/textViewStatus">
+
+
+               <RadioButton
+                   android:layout_width="88dp"
+                   android:layout_height="wrap_content"
+                   android:buttonTint="@color/white"
+                   android:id="@+id/rbTodo"
+                   android:text="@string/status_task_todo"
+                   android:checked="true"
+                   android:layout_weight="1"
+                   android:textColor="@color/white" />
+
+               <RadioButton
+                   android:layout_width="88dp"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/rbDoing"
+                   android:buttonTint="@color/white"
+                   android:layout_weight="1"
+                   android:text="@string/status_task_doing"
+                   android:textColor="@color/white"/>
+
+               <RadioButton
+                   android:layout_width="88dp"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/rbDone"
+                   android:buttonTint="@color/white"
+                   android:layout_weight="1"
+                   android:text="@string/status_task_done"
+                   android:textColor="@color/white"/>
+           </RadioGroup>
+
+           <com.google.android.material.button.MaterialButton
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/buttonSave"
+               android:layout_marginTop="16dp"
+               android:background="@drawable/bg_btn"
+               android:text="@string/text_button_form_task_fragment"
+               android:textAllCaps="false"
+               android:textColor="@color/color_default"
+               app:backgroundTint="@null"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+           <ProgressBar
+               android:id="@+id/progressBar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="8dp"
+               android:indeterminateTint="@color/white"
+               android:visibility="invisible"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/buttonSave"
+               tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

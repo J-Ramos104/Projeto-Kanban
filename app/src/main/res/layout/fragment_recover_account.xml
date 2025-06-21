@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    tools:context=".ui.auth.RecoverAccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout1">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:paddingTop="40dp"
+            app:navigationIcon="@drawable/ic_back">
+
+            <TextView
+                android:id="@+id/criarConta"
+                android:paddingTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_title_toolbar_recover_account_fragment"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="25dp">
+
+            <!-- width: comprimento -->
+            <!-- height: largura -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMensagem"
+                android:textAlignment="center"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_info_recover_account_fragment"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/TV_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email_text"
+                android:textColor="@color/white"
+                android:layout_marginTop="24dp"/>
+
+            <!-- espaçamento externo: margin -->
+            <!-- espaçamento interno: padding -->
+
+            <EditText
+                android:id="@+id/ED_email"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/hit_edit_email"
+                android:inputType="textEmailAddress"
+                style="@style/EditTextTheme"
+                android:layout_marginTop="4dp" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEnviar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_button_recover_account_fragment"
+                android:textColor="@color/color_default"
+                app:backgroundTint="@null"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_btn"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>
