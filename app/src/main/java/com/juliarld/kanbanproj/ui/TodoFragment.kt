@@ -12,7 +12,7 @@ import com.juliarld.kanbanproj.databinding.FragmentHomeBinding
 import com.juliarld.kanbanproj.databinding.FragmentTodoBinding
 
 
-class TodoFragment : Fragment() {
+class  TodoFragment : Fragment() {
     private var _binding: FragmentTodoBinding? = null
     private val binding get() = _binding!!
 
