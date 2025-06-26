@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/white"
             android:layout_gravity="center"
-            tools:ignore="visible"
+            tools:visibility="visible"
             android:visibility="invisible"/>
 
 
